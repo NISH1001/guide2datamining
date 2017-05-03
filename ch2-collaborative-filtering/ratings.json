@@ -1,0 +1,22 @@
+{
+    "Nishan" : {
+        "The Kite Runner" : 4.0,
+        "Are you joking Mr Feynman" : 4.0,
+        "One piece" : 5.0
+    },
+
+    "Manil" : {
+        "The Kite Runner" : 3.0,
+        "One piece" : 4.5
+    },
+
+    "Bijay" : {
+        "One piece" : 4.5,
+        "The Kite Runner" : 4.5
+    },
+
+    "Navin" : {
+        "The Kite Runner" : 4.5,
+        "Palpasa Cafe" : 3.0
+    }
+}
