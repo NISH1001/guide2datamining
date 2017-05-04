@@ -1,0 +1,37 @@
+{
+    "Nishan" : {
+        "Dragon Ball Z" : 5.0,
+        "One Piece" : 4.5,
+        "Fairy Tail" : 2.5,
+        "Full Metal Alchemist" : 5.0,
+        "Trigun" : 5.0
+    },
+
+    "Barsha" : {
+        "Noragami" : 4.5,
+        "Tokyo Ghoul" : 4.0,
+        "Mushishi" : 5.0,
+        "Haikyuu" : 5.0,
+        "Naruto" : 3.0
+    },
+
+    "Neelam" : {
+        "Naruto" : 4.0,
+        "Fairy Tail" : 2.0
+    },
+
+    "Bijay" : {
+        "Mushishi" : 5.0,
+        "Trigun" : 4.0,
+        "Natsume Yuujinchou" : 5.0,
+        "Bokuno Hero Acadamia" : 4.5
+    },
+
+    "Nishan2" : {
+        "One Piece" : 3.0,
+        "Fairy Tail" : 2.5,
+        "Full Metal Alchemist" : 4.5,
+        "Trigun" : 5.0,
+        "Haikyuu" : 3.0
+    }
+}
