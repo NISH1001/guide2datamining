@@ -4,6 +4,9 @@ import json
 
 from dist_metric import minkowski
 
+from mathutils import pearson_coefficient, cosine_similarity
+from dsutils import convert_to_sparse
+
 def load_data(filename="ratings.json"):
     """
     load json data
@@ -86,13 +89,38 @@ def recommend(username, users):
     return recommendations
 
 
+def pearson(users, username1, username2):
+    """
+        This finds the correlation between two users
+    """
+    rating1 = users[username1]
+    rating2 = users[username2]
+    common_keys = get_common_keys(rating1, rating2)
+    r1 = filter_by_keys(rating1, common_keys)
+    r2 = filter_by_keys(rating2, common_keys)
+    r = pearson_coefficient(get_dict_values_list(r1), get_dict_values_list(r2))
+    return r
+
+def cosine_similairty_ratings(users, username1, username2):
+    """
+        This finds the cosine similarity between two users
+    """
+    rating1 = users[username1]
+    rating2 = users[username2]
+    r1, r2 = convert_to_sparse(rating1, rating2)
+    c = cosine_similarity(get_dict_values_list(r1), get_dict_values_list(r2))
+    return c
 
 def main():
     #users = load_data("ratings2.json")
-    users = load_data("ratings_shows.json")
+    users = load_data("ratings2.json")
 
-    recommendations = recommend("Barsha", users)
-    print(recommendations)
+    #recommendations = recommend("Barsha", users)
+    #print(recommendations)
+    r = pearson(users, "Angelica", "Veronica")
+    print(r)
+    c = cosine_similairty_ratings(users, "Angelica", "Veronica")
+    print(c)
 
 if __name__ == "__main__":
     main()
